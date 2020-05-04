@@ -46,10 +46,11 @@ print("import successful")
 cluster = MongoClient("mongodb+srv://test1:test1@cluster0-d9jjq.mongodb.net/test?retryWrites=true&w=majority")
 print("connected")
 #mongodb+srv://test1:test1@cluster0-d9jjq.mongodb.net/test?retryWrites=true&w=majority
-db = cluster["test1"] #name of database is test
-collection = db["test1"] #name of collection is test
-
+db = cluster["test"] #name of database is test
+collection = db["test"] #name of collection is test
+'''
 collection.delete_many({})
+'''
 '''
 post = [
     {"cust_id": "A123", "amount": 500, "status": "A"},
@@ -60,7 +61,7 @@ post = [
 collection.insert_many(post)
 '''
 
-'''
+
 pipeline = [
     {"$match": {"status": "A"}},
     {"$group": {
@@ -71,6 +72,9 @@ pipeline = [
 
 result = collection.aggregate(pipeline)
 
+for i in result:
+    print (i)
+'''
 final_ans = {}
 distinct_cust_id = collection.distinct("cust_id")
 
@@ -85,5 +89,5 @@ for i in distinct_cust_id:
         final_ans[j["cust_id"]] = total
 
 print(final_ans)
-
-print("ending")'''
+'''
+print("ending")
