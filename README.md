@@ -25,13 +25,12 @@ Add the following line to .gitpod.yml:
   file: .gitpod.dockerfile
 ```
   
-Then start the MongoDB server by running this in a Terminal or in a .gitpod.yml command:
-mkdir -p /workspace/data && mongod --dbpath /workspace/data
-Note: Storing MongoDB’s data inside /workspace ensures that it will get backed up and restored properly when you stop and restart a workspace, or share a snapshot.
-
 Note: if you are doing this locally you can [download the MongoDB Community Edition here](https://docs.mongodb.com/manual/administration/install-community/)
 
 If you fork this repository, please ignore the lines above as the `.gitpod.dockerfile ` and `.gitpod.yml` files have already been configured before hand.
+
+Optional: Storing MongoDB’s data inside /workspace ensures that it will get backed up and restored properly when you stop and restart a workspace, or share a snapshot. [Instructions to do so..](https://www.gitpod.io/blog/gitpodify/#running-init-scripts), but note this repository is not configure to do so (and will not be covered in the workshop)
+
 
 ---
 
