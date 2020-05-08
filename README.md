@@ -16,7 +16,9 @@ Before we begin, we would need to download MongoDB. In order to do this in Gitpo
 
 Simply add the following line to .gitpod.dockerfile:
 
-```FROM gitpod/workspace-mongodb```
+```
+FROM gitpod/workspace-mongodb
+```
 
 Add the following line to .gitpod.yml:
 
