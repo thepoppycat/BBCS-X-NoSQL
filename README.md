@@ -68,8 +68,10 @@ Once Gitpod is fully loaded, you would need to do a few things before starting o
       target_arch: x86_64
   ```
 
+Once you edit finish your files in Gitpod, remember to save it and commit it to your Github Repository. [Check out how to do so here](https://www.gitpod.io/docs/git/)
+
 ---
 
-#### That should be all the set-up needed for Gitpod for this workshop!!! :relaxed: 
+#### That should be all the set-up needed for Gitpod for this workshop! :relaxed: 
 
 **Full workshop steps will be written here after the workshop on 13th May 2020 (slides will be attached as well)**
