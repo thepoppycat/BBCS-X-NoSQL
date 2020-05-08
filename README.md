@@ -7,8 +7,8 @@ For this workshop, we would be using:
 - [Gitpod](https://www.gitpod.io) as a online environment to run our code (as gitpod allows for some usage of terminal commands which we will be using later for importing our json file to the MongoDB server)
 
 This workshop is split into 2 parts:
-- In the first part, you will learn the basics of NoSQL (through the CRUD concept) as well as how to connect to MongoDB (remote server). All resources in the folder `Part 1`.
-- In the second part, you will learn the basics of pipeline aggregation in NoSQL and attempt to find who stole the sacred BuildingBloCS logo!!! Full story and resources in the folder `Part 2`.
+- In the first part, you will learn the **basics of NoSQL** (through the **CRUD** concept) as well as how to connect to MongoDB (remote server). All resources in the folder `Part 1`.
+- In the second part, you will learn the basics of **pipeline aggregation** in NoSQL and attempt to _find who stole the sacred BuildingBloCS logo_!!! Full story and resources in the folder `Part 2`.
 - Lastly, practice makes perfect, hence in the folder `Additional Datasets`, there are a few datasets (in the form of CSV files) for you to experiment with before the Amazing Race during BBCS20 Online Conference :stuck_out_tongue_winking_eye:
 
 ---
