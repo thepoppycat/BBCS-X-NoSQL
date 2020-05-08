@@ -1,2 +1,7 @@
 image:
   file: .gitpod.dockerfile
+
+tasks:
+  - before: mkdir -p /workspace/data
+    command: mongod --dbpath /workspace/data
+  
