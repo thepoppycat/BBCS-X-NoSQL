@@ -9,6 +9,8 @@ For this workshop, we would be using:
 - [MongoDB](https://www.mongodb.com) as a remote server database for storing our data
 - [Gitpod](https://www.gitpod.io) as a online environment to run our code (as gitpod allows for some usage of terminal commands which we will be using later for importing our json file to the MongoDB server)
 
+---
+
 Before we begin, we would need to download MongoDB. In order to do this in Gitpod, we would need to configure  `.gitpod.dockerfile ` and `.gitpod.yml` files to use the dedicated MongoDB image built on top of gitpod/workspace-full.
 
 Simply add the following line to .gitpod.dockerfile:
@@ -33,7 +35,7 @@ If you fork this repository, please ignore the lines above as the `.gitpod.docke
 
 ---
 
-Edit README.md and change the `<username>`in the following line of markdown to your Github username such that you can click the button to open Gitpod.
+Next, edit README.md and change the `<username>`in the following line of markdown to your Github username such that you can click the button to open Gitpod.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/joelleoqiyi/BBCS-X-NoSQL)
 
