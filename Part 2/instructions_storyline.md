@@ -9,11 +9,11 @@ Based on CCTV footage and evidence, the following deductions can be made:
   ```
   PRINTSPAN, TECHMANIA, NEPTIDE, MULTRON, SKYNET, UPDAT, STANTON
   ```
-- one of her friends' name start with C (you got this information from the sacred god of BuildingBloCS.. don't question it :bow: )
+- one of her friends' name start with C (you got this information from the sacred god of BuildingBloCS..don't question it :bow: )
 
 Being the ONE AND ONLY data master in BuildingBloCS land and have all information about all civillians here (stored in the names.json file). Can you use the gathered evidence to narrow down who the culprit may be? And as the police officers in BuildingBloCS land is extremely lazy, you would need to only provide them with the name of the culprit (not even the \_id of the person)
 
-The fate of BuildingBloCS lie in your hands :exclamation:
+The fate of BuildingBloCS lie in your hands:exclamation:
 
 **Answers/Code would be uploaded after the workshop**
 
