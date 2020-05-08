@@ -51,7 +51,7 @@ Once Gitpod is fully loaded, you would need to do a few things before starting o
   ```
   pip install pymongo
   ```
-- Check for the version of MongoDB (as well as whether it is in your workspace)
+- Check for the version of `MongoDB` (as well as whether it is in your workspace)
   ```
   mongod --version
   ```
@@ -70,3 +70,4 @@ Once Gitpod is fully loaded, you would need to do a few things before starting o
 
 ---
 
+That should be all the set-up needed for Gitpod for this workshop!!! :relaxed: 
