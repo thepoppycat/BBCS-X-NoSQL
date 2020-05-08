@@ -70,6 +70,6 @@ Once Gitpod is fully loaded, you would need to do a few things before starting o
 
 ---
 
-####That should be all the set-up needed for Gitpod for this workshop!!! :relaxed: 
+#### That should be all the set-up needed for Gitpod for this workshop!!! :relaxed: 
 
 **Full workshop steps will be written here after the workshop on 13th May 2020 (slides will be attached as well)**
