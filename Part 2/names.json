@@ -352,19 +352,19 @@
   },
   {
     "_id": "5eb56f6ea7d29acde354129e",
-    "name": "Bianca Hardin",
-    "age": 35,
-    "eyeColor": "brown",
-    "gender": "female",
+    "name": "Mark Hardin",
+    "age": 25,
+    "eyeColor": "blue",
+    "gender": "male",
     "company": "TECHMANIA",
-    "email": "biancahardin@techmania.com",
+    "email": "markhardin@techmania.com",
     "phone": "+1 (818) 402-3325",
     "address": "274 Bevy Court, Echo, New York, 2335",
     "registered": "2018-09-23T02:41:55 -08:00",
     "friends": [
       {
         "id": 0,
-        "name": "Trujillo Hancock"
+        "name": "Carol Clinton"
       },
       {
         "id": 1,
