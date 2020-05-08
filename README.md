@@ -29,7 +29,7 @@ Note: if you are doing this locally you can [download the MongoDB Community Edit
 
 If you fork this repository, please ignore the lines above as the `.gitpod.dockerfile ` and `.gitpod.yml` files have already been configured before hand.
 
-Optional: Storing MongoDB’s data inside /workspace ensures that it will get backed up and restored properly when you stop and restart a workspace, or share a snapshot. [Instructions to do so..](https://www.gitpod.io/blog/gitpodify/#running-init-scripts), but note this repository is not configure to do so (and will not be covered in the workshop)
+Optional: Storing MongoDB’s data inside /workspace ensures that it will get backed up and restored properly when you stop and restart a workspace, or share a snapshot. Note this repository is not configure to do so (and will not be covered in the workshop). [Click here for instructions](https://www.gitpod.io/blog/gitpodify/#running-init-scripts)
 
 
 ---
@@ -37,6 +37,36 @@ Optional: Storing MongoDB’s data inside /workspace ensures that it will get ba
 Next, edit README.md and change the `<username>`in the following line of markdown to your Github username such that you can click the button to open Gitpod.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/joelleoqiyi/BBCS-X-NoSQL)
+
+Once you changed README.md, click the button above.
+
+---
+
+Once Gitpod is fully loaded, you would need to do a few things before starting out on the workshop:
+- Install `dnspython` package through the terminal in Gitpod
+  ```
+  pip install dnspython
+  ```
+- Install `pymongo` package through the terminal in Gitpod
+  ```
+  pip install pymongo
+  ```
+- Check for the version of MongoDB (as well as whether it is in your workspace)
+  ```
+  mongod --version
+  ```
+  you should get a result similar to: 
+  ```
+  db version v4.0.18
+  git version: 6883g8d9j7f32176b1fd176df04da9165fd67
+  OpenSSL version: OpenSSL 1.1.1d  10 Sep 2019
+  allocator: tcmalloc
+  modules: none
+  build environment:
+      distmod: ubuntu1804
+      distarch: x86_64
+      target_arch: x86_64
+  ```
 
 ---
 
