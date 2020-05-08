@@ -1,9 +1,6 @@
 # BBCS-X-NoSQL
 
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/<username>/BBCS-X-NoSQL)
 
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/joelleoqiyi/BBCS-X-NoSQL)
 
 
 Hello! Welcome to BuildingBloCS 2020 NoSQL Workshop!
@@ -32,5 +29,13 @@ Note: Storing MongoDB’s data inside /workspace ensures that it will get backed
 
 Note: if you are doing this locally you can [download the MongoDB Community Edition here](https://docs.mongodb.com/manual/administration/install-community/)
 
+If you fork this repository, please ignore the lines above as the `.gitpod.dockerfile ` and `.gitpod.yml` files have already been configured before hand.
 
 ---
+
+Edit README.md and change the `<username>`in the following line of markdown to your Github username such that you can click the button to open Gitpod.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/joelleoqiyi/BBCS-X-NoSQL)
+
+---
+
