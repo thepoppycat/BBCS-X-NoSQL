@@ -1,13 +1,15 @@
 # BBCS-X-NoSQL
 
-
-
-
 Hello! Welcome to BuildingBloCS 2020 NoSQL Workshop!
 
 For this workshop, we would be using:
 - [MongoDB](https://www.mongodb.com) as a remote server database for storing our data
 - [Gitpod](https://www.gitpod.io) as a online environment to run our code (as gitpod allows for some usage of terminal commands which we will be using later for importing our json file to the MongoDB server)
+
+This workshop is split into 2 parts:
+- In the first part, you will learn the basics of NoSQL (through the CRUD concept) as well as how to connect to MongoDB (remote server). All resources in the folder `Part 1`.
+- In the second part, you will learn the basics of pipeline aggregation in NoSQL and attempt to find who stole the sacred BuildingBloCS logo!!! Full story and resources in the folder `Part 2`.
+- Lastly, practice makes perfect, hence in the folder `Additional Datasets`, there are a few datasets (in the form of CSV files) for you to experiment with before the Amazing Race during BBCS20 Online Conference :stuck_out_tongue_winking_eye:
 
 ---
 
@@ -24,10 +26,9 @@ Add the following line to .gitpod.yml:
 ```image:
   file: .gitpod.dockerfile
 ```
-  
-Note: if you are doing this locally you can [download the MongoDB Community Edition here](https://docs.mongodb.com/manual/administration/install-community/)
-
 If you fork this repository, please ignore the lines above as the `.gitpod.dockerfile ` and `.gitpod.yml` files have already been configured before hand.
+
+Note: if you are doing this locally you can [download the MongoDB Community Edition here](https://docs.mongodb.com/manual/administration/install-community/)
 
 Optional: Storing MongoDB’s data inside /workspace ensures that it will get backed up and restored properly when you stop and restart a workspace, or share a snapshot. Note this repository is not configure to do so (and will not be covered in the workshop). [Click here for instructions](https://www.gitpod.io/blog/gitpodify/#running-init-scripts)
 
@@ -55,7 +56,7 @@ Once Gitpod is fully loaded, you would need to do a few things before starting o
   ```
   mongod --version
   ```
-  you should get a result similar to: 
+  you should get a result similar to:
   ```
   db version v4.0.18
   git version: 6883g8d9j7f32176b1fd176df04da9165fd67
@@ -72,6 +73,6 @@ Once you edit finish your files in Gitpod, remember to save it and commit it to 
 
 ---
 
-#### That should be all the set-up needed for Gitpod for this workshop! :relaxed: 
+#### That should be all the set-up needed for Gitpod for this workshop! :relaxed:
 
 **Full workshop steps will be written here after the workshop on 13th May 2020 (slides will be attached as well)**
