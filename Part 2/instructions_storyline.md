@@ -11,11 +11,10 @@ Based on CCTV footage and evidence, the following deductions can be made:
   ```
 - one of her **friends' name starts with C** (you got this information from the sacred god of BuildingBloCS :bow:)
 
-<<<<<<< HEAD
 Being the ONE AND ONLY data master in BuildingBloCS land and having all information about all civilians here (stored in the names.json file). Can you use the gathered evidence to narrow down who the culprit may be? And as the police officers in BuildingBloCS land are extremely lazy, you can only provide them with the name of the culprit (not even the \_id of the person)
 =======
 Being the ONE AND ONLY data master in BuildingBloCS land and have all information about all civilians here (stored in the names.json file). Can you use the gathered evidence to narrow down who the culprit may be? And as the police officers in BuildingBloCS land is extremely lazy, you can only provide them with the name of the culprit (not even the \_id of the person).
->>>>>>> Added noPipeline.py
+
 
 The fate of BuildingBloCS land lies in your hands. :exclamation::exclamation::exclamation:
 
