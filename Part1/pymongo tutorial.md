@@ -1,4 +1,4 @@
-# Fundamental C.R.U.D functions of persistent storage
+# Fundamental C.R.U.D functions for MongoDB with pymongo
 
 C - Create
 
