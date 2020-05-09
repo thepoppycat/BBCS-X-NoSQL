@@ -1,11 +1,11 @@
-# Fundamental Pipeline Aggregation for MongoDB with pymongo
+# Pipeline Aggregation for MongoDB with pymongo
 
 For this workshop, we shall be going through reading the database using the `.aggregate()` method on a database collection and finding out who stole the sacred BuildingBloCS Logo. [Click here to see the storyline](https://github.com/joelleoqiyi/BBCS-X-NoSQL/tree/master/Part1)
 
 Before we go through how to use pipeline aggregation with NoSQL, we need to import our possible suspects (in names.json)
 
-In MongoDB Atlas,
-1) Click on your cluster name and then click `Command Line Tools`. You should see something like this:
+
+1) In MongoDB Atlas, click on your cluster name and then click `Command Line Tools`. You should see something like this:
 
 ![](../images/MongoDBAtlas_CommandLineTools.png)
 
@@ -15,7 +15,7 @@ It should look something like this:
 ```
 mongoimport --host Cluster0-shard-0/cluster0-shard-00-00-d8ikq.mongodb.net:27017,cluster0-shard-00-01-d8ikq.mongodb.net:27017,cluster0-shard-00-02-d8ikq.mongodb.net:27017 --ssl --username <USERNAME> --password <PASSWORD> --authenticationDatabase admin --db <DATABASE> --collection <COLLECTION> --type <FILETYPE> --file <FILENAME>
 ```
-3) Paste and run the command line code (which you copied) into the terminal in Gitpod, replace the following things:
+3) In Gitpod, paste and run the command line code (which you copied) into the terminal, replace the following things:
 - `<USERNAME>` with your MongoDB user's username (not the one to your account)
 - `<PASSWORD>` with your MongoDB user's password (not the one to your account)
 - `<DATABASE>` with the name of your database (if enter a name that currently exist in your MongoDB cluster, MongoDB would create a new database for you)
