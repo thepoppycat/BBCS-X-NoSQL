@@ -33,6 +33,7 @@ In the above code snippet, `Consumable_database` is merely a variable placeholde
   Fruits_collection = Consumables_database.get_collection('Fruits')
   ```
   The naming convention follows similarly for the earlier snippet, nothing much to explain here.
+  
   Remember I am only creating one collection for this example, you can create as many collections as you want within a database. So lets   say you wanna make a drinks collection just do `Drinks_collection = Consumables_database.get_collection('Drinks')`
   
    **Adding documents into a collection**
@@ -41,9 +42,12 @@ In the above code snippet, `Consumable_database` is merely a variable placeholde
   ```
   Fruits_collection.insert_one({"Item" : "Banana", "Weight" : 300, "Price" : 3, "Colour" : "Yellow", "Length" : 10})
   ```
-  If you want to insert multiple documents instead you can just use `.insert_many(data1, data2, data3, etc)`.                             You realise that documents come in the form of dictionaries. If you don't already know yet, dictionaries are like arrays but instead of having a single element in each index of the array, dictionaries have a key-value pair representing an element in the dictionary.
+  If you want to insert multiple documents instead you can just use `.insert_many(data1, data2, data3, etc)`.  
+  
+  You realise that documents come in the form of dictionaries. If you don't already know yet, dictionaries are like arrays but instead of having a single element in each index of the array, dictionaries have a key-value pair representing an element in the dictionary.
   
   Inserting just one document into the collection seems readible enough. But when you want to insert multiple documents at once, it may become too hard to read and therefore we can use the alternative:
+  
   Assign multiple documents into an array, separated by commas. Then just `insert_many(array)`
   
   For example:
@@ -95,6 +99,7 @@ print(consumabes_database.list_collection_names())
 fruits_collection.find()
 ```
 Yes unfortunately it's not `fruits_collection.list_documents_names()` unlike for databases and collections, it's different because it's like that.
+
 *Also*, printing `fruits_collection.find()` will not return you a nice array like databases and collections. To view the data easier, we run a for loop through it and printing each element, which will print the whole document nicely.
 ```
 print('Listing documents in the fruits collection...')
@@ -171,13 +176,14 @@ Fruits_collection.delete_one({"name" : "banana"})
 ```
 Fruits_collection.delete_many({"name" : "banana"})
 ```
+## 
 
 And here concludes the end of our MongoDB tutorial! :). For any questions, feel free to ask us on Discord or email.
 
 **Discord**
 
-Ace : Rumiya#8288, Joel: joelleo#9284
+Ace : Rumiya#8288 | Joel: joelleo#9284
 
 **Email**
 
-Ace: chow.kianfong.ace@dhs.sg, Joel: leo.qiyi.joel@dhs.sg
+Ace: chow.kianfong.ace@dhs.sg | Joel: leo.qiyi.joel@dhs.sg
