@@ -36,6 +36,7 @@ In the above code snippet, `Consumable_database` is merely a variable placeholde
   Remember I am only creating one collection for this example, you can create as many collections as you want within a database. So lets   say you wanna make a drinks collection just do `Drinks_collection = Consumables_database.get_collection('Drinks')`
   
    **Adding documents into a collection**
+   
   To insert documents into a collection, we use the following function:
   ```
   Fruits_collection.insert_one({"Item" : "Banana", "Weight" : 300, "Price" : 3, "Colour" : "Yellow", "Length" : 10})
@@ -101,6 +102,7 @@ for documents in fruits_collection.find():
   print(documents)
 ```
 **Listing specific documents in a collection**
+
 Earlier I have shown you that we just list all documents in the fruits collection. What if you want to just view fruits that are yellow colour? We use specific queries in the `.find()` method like so:
 ```
 Yellow_fruits = fruits_collection.find({"Colour" : "Yellow"})
@@ -109,6 +111,7 @@ for fruits in Yellow_fruits:
 ```
 
 **Advanced queries!! :DDD**
+
 Now that you have learned how to list specific documents, you know how to find fruits that weigh 300g. What if you want to find fruits that weigh less than 300g? Like this..
 ```
 Light_fruits = fruits_collection.find({"weight" :{"$lt" : 300}})
@@ -137,5 +140,44 @@ Here is a table for conditionals/queries that you can utilise to get exactly wha
 | $and      |Logical AND|
 | $exists     |Matches documents which has the named field|
 
-  
+With that in mind lets find out how we can update values in our database
 
+## Update
+
+Want to change some of your data because they're outdated? Use the following functions to update documents.
+
+**Updating one document**
+```
+Fruits_collection.update_one({"name" : "banana"} , {$set : {"name" : "awesome_banana"}})
+```
+`{"name" : "banana"}` is the conditional if the document that you want to update, and `{"name" : "awesome_banana}` is what you want your updated value to be.
+
+Updating just one value is weird, this is how to update many values. Suppose the inflation rate is hitting you hard and the rise in the unit cost of production of fruits signals fruit firms like you to increase the market price of your fruits:
+
+**Updating many documents**
+```
+Fruits_collection.update_many({"price" : {"$lte" : 3.00} , {$set : {"price" : 4.00}})
+```
+
+## Delete
+
+Deleting documents is very similar to updating documents because you just have to simply change `update_one/many` to `delete_one/many`.
+
+**Deleting one document 
+```
+Fruits_collection.delete_one({"name" : "banana"})
+```
+**Deleting many documents**
+```
+Fruits_collection.delete_many({"name" : "banana"})
+```
+
+And here concludes the end of our MongoDB tutorial! :). For any questions, feel free to ask us on Discord or email.
+
+**Discord**
+
+Ace : Rumiya#8288, Joel: joelleo#9284
+
+**Email**
+
+Ace: chow.kianfong.ace@dhs.sg, Joel: leo.qiyi.joel@dhs.sg
