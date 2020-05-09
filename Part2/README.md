@@ -6,7 +6,7 @@ Before we go through how to use pipeline aggregation with NoSQL, we need to impo
 
 In MongoDB Atlas,
 1) Click on your cluster name and then click `Command Line Tools`. You should see something like this: <br />
-    ![](../images/MongoDBAtlas_CommandLineTools.pngPa)
+    ![](../images/MongoDBAtlas_CommandLineTools.png)
 2)
 In the command line terminal of Gitpod type in the following line,
 ```
