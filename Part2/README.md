@@ -9,13 +9,13 @@ In MongoDB Atlas,
 
 ![](../images/MongoDBAtlas_CommandLineTools.png)
 
-2)Scroll down till `Data Import and Export Tools` and copy the command line code for `mongoimport` (we are **importing** data using the `mongoimport` function)
+2) Scroll down till `Data Import and Export Tools` and copy the command line code for `mongoimport` (we are **importing** data using the `mongoimport` function)
 
 It should look something like this:
 ```
 mongoimport --host Cluster0-shard-0/cluster0-shard-00-00-d8ikq.mongodb.net:27017,cluster0-shard-00-01-d8ikq.mongodb.net:27017,cluster0-shard-00-02-d8ikq.mongodb.net:27017 --ssl --username <USERNAME> --password <PASSWORD> --authenticationDatabase admin --db <DATABASE> --collection <COLLECTION> --type <FILETYPE> --file <FILENAME>
 ```
-Paste and run the command line code (which you copied) into the terminal in Gitpod, replace the following things:
+3) Paste and run the command line code (which you copied) into the terminal in Gitpod, replace the following things:
 - `<USERNAME>` with your MongoDB user's username (not the one to your account)
 - `<PASSWORD>` with your MongoDB user's password (not the one to your account)
 - `<DATABASE>` with the name of your database (if enter a name that currently exist in your MongoDB cluster, MongoDB would create a new database for you)
@@ -48,11 +48,11 @@ If you're running your MongoDB server locally, then by default your local MongoD
 
 Previously, you learnt the basics of pymongo such as `db.collections.find()` to find/read from MongoDB Atlas.
 
-**But what is pipeline aggregation?**
+####But what is pipeline aggregation?
 
 The MongoDB aggregation pipeline consists of **stages**. Each stage transforms the documents as they pass through the pipeline. Pipeline stages do not need to produce one output document for every input document; e.g., some stages may generate new documents or filter out documents.
 
-Pipeline stages can appear multiple times in the pipeline with the exception of $out, $merge, and $geoNear stages. For a list of all available stages, see [Aggregation Pipeline Stages](https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/#aggregation-pipeline-operator-reference). This makes certain tasks easier as you would not have to deal with needing to use `db.collections.find()` or other query methods multiple times, you would also not as likely need to do pre/post-processing of data using python as you are able to "compile" all the different tasks you need to do (before your final output) into a **pipeline** and aggregate them all at once, making complex tasks significantly easier to understand and execute. 
+Pipeline stages can appear multiple times in the pipeline with the exception of `$out`, `$merge`, and `$geoNear` stages. For a list of all available stages, see [Aggregation Pipeline Stages](https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/#aggregation-pipeline-operator-reference). This makes certain tasks easier as you would not have to deal with needing to use `db.collections.find()` or other query methods multiple times, you would also not as likely need to do pre/post-processing of data using python as you are able to "compile" all the different tasks you need to do (before your final output) into a **pipeline** and aggregate them all at once, making complex tasks significantly easier to understand and execute.
 
 MongoDB provides the `db.collection.aggregate()` method in the mongo shell to run the aggregation pipeline.
 
@@ -87,7 +87,22 @@ for i in distinct_cust_id:
 
 print(final_ans)
 ```
-We won't be going through `db.collection.distinct()` and `$group (aggregation)` but some things to consider is that, although both codes does and outputs the same dictionary, pipeline aggregation does it in a **more succinct and concise way** compared to the one which doesn't.
+We won't be going through `db.collection.distinct()` and `$group (aggregation)`, you can view a short video about the code above through [this link](https://docs.mongodb.com/manual/_images/agg-pipeline.mp4), but some things to consider is that, although both codes does and outputs the same dictionary, pipeline aggregation does it in a **more succinct and concise way** compared to the one which doesn't.
+
+---
+
+Here is some "conversion" between pipeline aggregation and normal query:
+
+|Normal Query| Pipeline Aggregation |
+|--|--|
+|db.collections.find(\<query>)  |{ [$match](https://docs.mongodb.com/manual/reference/operator/aggregation/match/): { \<query> } }  |
+|db.collections.find(\<projection>)| { [$project](https://docs.mongodb.com/manual/reference/operator/aggregation/project/): { \<specification(s)> } }|
+|db.collection.distinct(\<query>) + pre/post-processing in python | { [$group](https://docs.mongodb.com/manual/reference/operator/aggregation/group/): { _id: \<expression>, \<field1>: { \<accumulator1> : \<expression1> }, ...}}|
+|db.collections.find().limit(\<positive integer>) | { [$limit](https://docs.mongodb.com/manual/reference/operator/aggregation/limit/): \<positive integer> }|
+|db.collection.countDocuments( \<query>, \<options> ) | { [$count](https://docs.mongodb.com/manual/reference/operator/aggregation/count/): \<string> } |
+| ... | ... |
+
+With that in mind lets find out how we can update values in our database
 
 ##
 
