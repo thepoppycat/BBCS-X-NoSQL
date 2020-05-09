@@ -10,7 +10,6 @@ Before we go through the CRUD details, we shall connect to a client/cluster firs
 import pymongo
 
 client = pymongo.MongoClient(<MongoDB server here>)
-
 '''
 For this ~~cheatsheet~~ example, our database will be consumables, collection be food, and documents be banana.
 ### Create
