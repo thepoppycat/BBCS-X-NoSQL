@@ -66,7 +66,7 @@ In the above code snippet, `Consumable_database` is merely a variable placeholde
     "Bundle_Quantity" : 42
 
     }]
-    ```
+```
 **Inserting all those documents into the fruits collection**
 ```
 fruits_collection.insert_many(manystuf)
