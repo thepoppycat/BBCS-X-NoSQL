@@ -49,6 +49,8 @@ print(final_ans)
 ```
 We won't be going through `db.collection.distinct()` and `$group (aggregation)`, you can view a short video about the code above through [this link](https://docs.mongodb.com/manual/_images/agg-pipeline.mp4), but some things to consider is that, although both codes does and outputs the same dictionary, pipeline aggregation does it in a **more succinct and concise way** compared to the one which doesn't.
 
+<sub>Note: this does not apply to all tasks, using pipeline aggregation in some tasks might make it even more challenging as there are certain limitations while using pipeline aggregation</sub>
+
 ---
 
 ## Let's import the our suspect's data...
