@@ -1,55 +1,14 @@
 # Pipeline Aggregation for MongoDB with pymongo
 
-For this workshop, we shall be going through reading the database using the `.aggregate()` method on a database collection and finding out who stole the sacred BuildingBloCS Logo. [Click here to see the storyline](https://github.com/joelleoqiyi/BBCS-X-NoSQL/tree/master/Part1)
+For this workshop, we shall be going through reading the database using the `.aggregate()` method on a database collection and finding out who stole the sacred BuildingBloCS Logo.
 
-Before we go through how to use pipeline aggregation with NoSQL, we need to import our possible suspects (in names.json)
-
----
-
-1) In MongoDB Atlas, click on your cluster name and then click `Command Line Tools`. You should see something like this:
-
-![](../images/MongoDBAtlas_CommandLineTools.png)
-
-2) Scroll down till `Data Import and Export Tools` and copy the command line code for `mongoimport` (we are **importing** data using the `mongoimport` function)
-
-It should look something like this:
-```
-mongoimport --host Cluster0-shard-0/cluster0-shard-00-00-d8ikq.mongodb.net:27017,cluster0-shard-00-01-d8ikq.mongodb.net:27017,cluster0-shard-00-02-d8ikq.mongodb.net:27017 --ssl --username <USERNAME> --password <PASSWORD> --authenticationDatabase admin --db <DATABASE> --collection <COLLECTION> --type <FILETYPE> --file <FILENAME>
-```
-3) In Gitpod, paste and run the command line code (which you copied) into the terminal, replace the following things:
-- `<USERNAME>` with your MongoDB user's username (not the one to your account)
-- `<PASSWORD>` with your MongoDB user's password (not the one to your account)
-- `<DATABASE>` with the name of your database (if enter a name that currently exist in your MongoDB cluster, MongoDB would create a new database for you)
-- `<COLLECTION>` with the name of your collection (if enter a name that currently exist in your MongoDB cluster, MongoDB would create a new collection for you)
-- `<FILETYPE>` with the type of the file that you are going to import (in our case type `json`)
-- `<FILENAME>` with the name of the file you are going to import (in our case `names.json`)
-
-You also need to add in `--jsonArray`, this tells MongoDB that your json file is already formatted properly.
-
-It should look something like this:
-```
-mongoimport --host Cluster0-shard-0/cluster0-shard-00-00-d8ikq.mongodb.net:27017,cluster0-shard-00-01-d8ikq.mongodb.net:27017,cluster0-shard-00-02-d8ikq.mongodb.net:27017 --ssl --username sampleusername --password samplepassword --authenticationDatabase admin --db suspectsDatabase --collection suspectsCollections --type json --file names.json --jsonArray
-```
-
+## [Read the storyline here](https://github.com/joelleoqiyi/BBCS-X-NoSQL/tree/master/Part1)
 
 ---
 
-Next we need to connect to the cluster --> database --> collection
-```
-import pymongo
-from pymongo import MongoClient
-client = pymongo.MongoClient(<MongoDB server here>)
-
-db = cluster["<database name here>"] #insert name of database you created earlier here
-collection = db["<collections name here>"] #insert name of collection you created earlier here
-```
-If you're running your MongoDB server locally, then by default your local MongoDB IP address and port is `'127.0.0.1', 27017` respectfully. If you wanna connect to the MongoDB Atlas as explained in the workshop then please follow the instructions in the README.MD in the root of this repository.
-
----
+## But what is pipeline aggregation?
 
 Previously, you learnt the basics of pymongo such as `db.collections.find()` to find/read from MongoDB Atlas.
-
-#### But what is pipeline aggregation?
 
 The MongoDB aggregation pipeline consists of **stages**. Each stage transforms the documents as they pass through the pipeline. Pipeline stages do not need to produce one output document for every input document; e.g., some stages may generate new documents or filter out documents.
 
@@ -92,7 +51,57 @@ We won't be going through `db.collection.distinct()` and `$group (aggregation)`,
 
 ---
 
-Here is some "conversion" between pipeline aggregation and normal query:
+## Let's import the our suspect's data...
+
+Our suspect's data is stored in a file called `names.json` and we would be using [mongoimport](https://docs.mongodb.com/manual/reference/program/mongoimport/) to import it into MongoDB Atlas. Follow the following steps:
+
+1) In MongoDB Atlas, click on your cluster name and then click `Command Line Tools`. You should see something like this:
+
+![](../images/MongoDBAtlas_CommandLineTools.png)
+
+2) Scroll down till `Data Import and Export Tools` and copy the command line code for `mongoimport` (we are **importing** data using the `mongoimport` function)
+
+It should look something like this:
+```
+mongoimport --host Cluster0-shard-0/cluster0-shard-00-00-d8ikq.mongodb.net:27017,cluster0-shard-00-01-d8ikq.mongodb.net:27017,cluster0-shard-00-02-d8ikq.mongodb.net:27017 --ssl --username <USERNAME> --password <PASSWORD> --authenticationDatabase admin --db <DATABASE> --collection <COLLECTION> --type <FILETYPE> --file <FILENAME>
+```
+3) In Gitpod, paste and run the command line code (which you copied) into the terminal, replace the following things:
+- `<USERNAME>` with your MongoDB user's username (not the one to your account)
+- `<PASSWORD>` with your MongoDB user's password (not the one to your account)
+- `<DATABASE>` with the name of your database (if enter a name that currently exist in your MongoDB cluster, MongoDB would create a new database for you)
+- `<COLLECTION>` with the name of your collection (if enter a name that currently exist in your MongoDB cluster, MongoDB would create a new collection for you)
+- `<FILETYPE>` with the type of the file that you are going to import (in our case type `json`)
+- `<FILENAME>` with the name of the file you are going to import (in our case `names.json`)
+
+You also need to add in `--jsonArray`, this tells MongoDB that your json file is already formatted properly.
+
+It should look something like this:
+```
+mongoimport --host Cluster0-shard-0/cluster0-shard-00-00-d8ikq.mongodb.net:27017,cluster0-shard-00-01-d8ikq.mongodb.net:27017,cluster0-shard-00-02-d8ikq.mongodb.net:27017 --ssl --username sampleusername --password samplepassword --authenticationDatabase admin --db suspectsDatabase --collection suspectsCollections --type json --file names.json --jsonArray
+```
+
+---
+
+## Connecting to MongoDB Atlas...
+
+Next we need to connect to the cluster --> database --> collection
+```
+import pymongo
+from pymongo import MongoClient
+client = pymongo.MongoClient(<MongoDB server here>)
+
+db = cluster["<database name here>"] #insert name of database you created earlier here
+collection = db["<collections name here>"] #insert name of collection you created earlier here
+```
+If you're running your MongoDB server locally, then by default your local MongoDB IP address and port is `'127.0.0.1', 27017` respectfully. If you wanna connect to the MongoDB Atlas as explained in the workshop then please follow the instructions in the README.MD in the root of this repository.
+
+---
+
+## Finally...
+
+**Try to complete `noPipeline.py` and try to complete the task using the query methods that you have learnt before.**
+
+
 
 |Normal Query| Pipeline Aggregation stages|
 |--|--|
@@ -103,7 +112,8 @@ Here is some "conversion" between pipeline aggregation and normal query:
 |db.collection.countDocuments( \<query>, \<options> ) | { [$count](https://docs.mongodb.com/manual/reference/operator/aggregation/count/): \<string> } |
 | ... | ... |
 
-
+**Then using the above "conversion" table, complete `Pipeline.py` by converting/condensing your normal query methods into one that uses pipeline aggregation!**
+<small>Admittedly, this is not the best example to show the true power of pipeline aggregation but it is a step in the right direction </small>
 
 ##
 
