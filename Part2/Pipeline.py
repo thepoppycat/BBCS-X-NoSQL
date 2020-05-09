@@ -1,4 +1,3 @@
-#installing python packages
 import _____
 from _____ import ______
 uri = "_________________________________" #add in your MongoDB connection string here
@@ -18,13 +17,8 @@ pipeline = [
         {"______": 1, "______": 0}}
 ]
 
+#time to use the pipeline!
+#Note: pipeline aggregation returns you a cursor object to the MongoDB database so you need to iterate through result to get the actual values.
 result = collection.______(pipeline)
 for i in result:
     print (i)
-
-
-#https://www.gitpod.io/blog/gitpodify/
-#https://www.gitpod.io/docs/getting-started/
-#https://www.gitpod.io/docs/git/
-
-#killer is 62
