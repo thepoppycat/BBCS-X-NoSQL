@@ -22,7 +22,7 @@ result = collection.aggregate(pipeline)
 for i in result:
     print (i)
 
-
+print("is this working?")
 print("ending")
 
 #https://www.gitpod.io/blog/gitpodify/
