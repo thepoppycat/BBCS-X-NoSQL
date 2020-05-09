@@ -8,12 +8,14 @@ In MongoDB Atlas,
 1) Click on your cluster name and then click `Command Line Tools`. You should see something like this:
 
 ![](../images/MongoDBAtlas_CommandLineTools.png)
-2)
-In the command line terminal of Gitpod type in the following line,
+
+2)Scroll down till `Data Import and Export Tools` and copy the command line code for `mongoimport` (we are **importing** data using the `mongoimport` function)
+
+  - It should look something like this:
 ```
 mongoimport --host Cluster0-shard-0/cluster0-shard-00-00-d8ikq.mongodb.net:27017,cluster0-shard-00-01-d8ikq.mongodb.net:27017,cluster0-shard-00-02-d8ikq.mongodb.net:27017 --ssl --username <username> --password <PASSWORD> --authenticationDatabase admin --db <DATABASE> --collection <COLLECTION> --type <FILETYPE> --file <FILENAME>
 ```
-Remember to replace `username`, `password`, `database`, `collection`,
+Paste
 ```
 import pymongo
 
