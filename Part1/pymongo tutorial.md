@@ -187,3 +187,5 @@ Ace : Rumiya#8288 | Joel: joelleo#9284
 **Email**
 
 Ace: chow.kianfong.ace@dhs.sg | Joel: leo.qiyi.joel@dhs.sg
+
+~~And if you don't like my face you can also refer to online resources such as w3schools or stackoverflow~~
