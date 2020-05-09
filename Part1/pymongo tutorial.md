@@ -19,7 +19,7 @@ For this ~~cheatsheet~~ example, our database will be consumables, collection be
 
 In MongoDB, creating a database/collection has the same function as routing to it.
 
-⋅⋅* **Creating/Connecting to a database within a client**
+⋅⋅* Creating/Connecting to a database within a client
 ```
 Consumables_database = client.get_database('Consumables') 
 ```
