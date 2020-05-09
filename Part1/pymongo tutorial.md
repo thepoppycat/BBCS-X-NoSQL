@@ -37,6 +37,7 @@ In the above code snippet, `Consumable_database` is merely a variable placeholde
   ..* **Adding documents into a collection**
   To insert documents into a collection, we use the following function:
   ```
-  Fruits_collection.insert_one(data)
+  Fruits_collection.insert_one({"Item" : "Banana", "Weight" : 300, "Price" : 3, "Colour" : "Yellow", "Length" : 10})
   ```
-  benis gay
+  asdasd
+asdasdasd
