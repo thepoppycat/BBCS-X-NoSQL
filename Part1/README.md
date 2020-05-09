@@ -14,7 +14,7 @@ import pymongo
 
 client = pymongo.MongoClient(<MongoDB server here>)
 ```
-If you're running your MongoDB server locally, then by default your local MongoDB IP address and port is `'127.0.0.1', 27017` respectfully. If you wanna connect to the MongoDB Atlas as explained in the workshop then please follow the instructions in the README.MD outside.
+If you're running your MongoDB server locally, then by default your local MongoDB IP address and port is `'127.0.0.1', 27017` respectfully. If you wanna connect to the MongoDB Atlas as explained in the workshop then please follow the instructions in the README.MD in the root of this repository.
 
 For this ~~cheatsheet~~ example, our database will be consumables, collection be food, and documents be banana.
 ## Create
@@ -23,34 +23,34 @@ In MongoDB, creating a database/collection has the same function as routing to i
 
  **Creating/Connecting to a database within a client**
 ```
-Consumables_database = client.get_database('Consumables') 
+Consumables_database = client.get_database('Consumables')
 ```
-In the above code snippet, `Consumable_database` is merely a variable placeholder in the pymongo command line... You can call it whatever you want as long as it's easy to understand. For me I follow the convention <databasename>_database so that it's easier to understand.
-  
+In the above code snippet, `Consumable_database` is merely a variable placeholder in the pymongo command line... You can call it whatever you want as long as it's easy to understand. For me I follow the convention <databasename>_database so that it's easier to understand._
+
   As for `client.get_database('Consumables')`, Consumables is the name of the database you want to create/connect to.
-  
+
    **Creating/Connecting to a collection within a database**
   ```
   Fruits_collection = Consumables_database.get_collection('Fruits')
   ```
   The naming convention follows similarly for the earlier snippet, nothing much to explain here.
-  
+
   Remember I am only creating one collection for this example, you can create as many collections as you want within a database. So lets   say you wanna make a drinks collection just do `Drinks_collection = Consumables_database.get_collection('Drinks')`
-  
+
    **Adding documents into a collection**
-   
+
   To insert documents into a collection, we use the following function:
   ```
   Fruits_collection.insert_one({"Item" : "Banana", "Weight" : 300, "Price" : 3, "Colour" : "Yellow", "Length" : 10})
   ```
   If you want to insert multiple documents instead you can just use `.insert_many(data1, data2, data3, etc)`.  
-  
+
   You realise that documents come in the form of dictionaries. If you don't already know yet, dictionaries are like arrays but instead of having a single element in each index of the array, dictionaries have a key-value pair representing an element in the dictionary.
-  
+
   Inserting just one document into the collection seems readible enough. But when you want to insert multiple documents at once, it may become too hard to read and therefore we can use the alternative:
-  
+
   Assign multiple documents into an array, separated by commas. Then just `insert_many(array)`
-  
+
   For example:
   **Creating an array to be inserted all at once into the fruits collection**
   ```
@@ -131,7 +131,7 @@ for fruits in Special_condition_fruits:
   print(fruits)
 ```
 Here is a table for conditionals/queries that you can utilise to get exactly what data you want to find. :)
-  
+
 | Conditional   | Purpose|
 | ------------- |:-------------:|
 | $eq      |Equals to|
@@ -169,7 +169,7 @@ Fruits_collection.update_many({"price" : {"$lte" : 3.00} , {$set : {"price" : 4.
 
 Deleting documents is very similar to updating documents because you just have to simply change `update_one/many` to `delete_one/many`.
 
-**Deleting one document 
+**Deleting one document
 ```
 Fruits_collection.delete_one({"name" : "banana"})
 ```
@@ -177,16 +177,6 @@ Fruits_collection.delete_one({"name" : "banana"})
 ```
 Fruits_collection.delete_many({"name" : "banana"})
 ```
-## 
+##
 
-And here concludes the end of our MongoDB tutorial! :). For any questions, feel free to ask us on Discord or email.
-
-**Discord**
-
-Ace : Rumiya#8288 | Joel: joelleo#9284
-
-**Email**
-
-Ace: chow.kianfong.ace@dhs.sg | Joel: leo.qiyi.joel@dhs.sg
-
-~~And if you don't like my face you can also refer to online resources such as w3schools or stackoverflow~~
+And here concludes the end of our MongoDB tutorial Part 1! :). For any questions, feel free to ask us on Discord

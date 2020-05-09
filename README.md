@@ -73,6 +73,6 @@ Once you edit finish your files in Gitpod, remember to save it and commit it to 
 
 ---
 
-#### That should be all the set-up needed for Gitpod for this workshop! :relaxed:
+#### That should be all the set-up needed for Gitpod for this workshop! For any questions, feel free to ask us on Discord :relaxed:
 
 **Full workshop steps will be written here after the workshop on 13th May 2020 (slides will be attached as well)**
