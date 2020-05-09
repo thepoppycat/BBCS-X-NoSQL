@@ -113,7 +113,7 @@ If you're running your MongoDB server locally, then by default your local MongoD
 | ... | ... |
 
 **Then using the above "conversion" table, complete `Pipeline.py` by converting/condensing your normal query methods into one that uses pipeline aggregation!**
-<font size="1">Admittedly, this is not the best example to show the true power of pipeline aggregation but it is a step in the right direction </font>
+<sub>Admittedly, this is not the best example to show the true power of pipeline aggregation but it is a step in the right direction </sub>
 
 ##
 
