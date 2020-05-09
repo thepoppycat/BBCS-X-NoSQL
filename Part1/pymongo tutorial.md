@@ -40,4 +40,4 @@ In the above code snippet, `Consumable_database` is merely a variable placeholde
   Fruits_collection.insert_one({"Item" : "Banana", "Weight" : 300, "Price" : 3, "Colour" : "Yellow", "Length" : 10})
   ```
   asdasd
-asdasdasd
+  asdasdasd
