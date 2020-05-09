@@ -16,11 +16,11 @@ Being the ONE AND ONLY data master in BuildingBloCS land and have all informatio
 
 The fate of BuildingBloCS land lies in your hands. :exclamation::exclamation::exclamation:
 
-**Code Snippets have been uploaded but full answers would only be uploaded after the workshop**
+**Code Snippets have been uploaded but full answers would only be uploaded after the workshop in `Answers` folder**
 
 ---
 
-Additional Practice (not covered in this workshop but feel free to submit your work @ URL and ask questions in the Discord channels when in doubt):
+**Additional Practice** (not covered in this workshop but feel free to submit your work @ URL and ask questions in the Discord channels when in doubt):
 - Find out whether any other person in names.json has at least one common friend as the culprit (names match exactly)
 - Find out the number of people in names.json that has the same `favoriteFruit` as the culprit (excluding the culprit)
 - Come up with your own questions :grin:
