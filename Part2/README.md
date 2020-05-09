@@ -5,9 +5,8 @@ For this workshop, we shall be going through reading the database using the `.ag
 Before we go through how to use pipeline aggregation with NoSQL, we need to import our possible suspects (in names.json)
 
 In MongoDB Atlas,
-1) Click on your cluster name and then click `Command Line Tools`
-    You should see something like this:
-    ![](../images/MongoDBAtlas_CommandLineTools.png)
+1) Click on your cluster name and then click `Command Line Tools`. You should see something like this: <br />
+    ![](../images/MongoDBAtlas_CommandLineTools.pngPa)
 2)
 In the command line terminal of Gitpod type in the following line,
 ```
