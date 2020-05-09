@@ -1,4 +1,4 @@
-# Storyline ... test
+# Storyline ...
 
 Our sacred BuildingBloCS logo has been stolen! And the culprit is currently still at large somewhere in BuildingBloCS land :scream:
 
