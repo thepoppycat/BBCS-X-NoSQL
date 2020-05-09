@@ -1,8 +1,11 @@
 #Fundamental C.R.U.D functions of persistent storage
 
 C - Create
+
 R - Read
+
 U - Update
+
 D - Delete
 
 Before we go through the CRUD details, we shall connect to a client/cluster first
