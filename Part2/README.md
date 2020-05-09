@@ -16,7 +16,7 @@ Pipeline stages can appear multiple times in the pipeline with the exception of 
 
 MongoDB provides the `db.collection.aggregate()` method in the mongo shell to run the aggregation pipeline.
 
-Lets look at an example:
+**Lets look at an example:**
 
 The following code uses pipeline aggregation.
 ```
@@ -113,7 +113,7 @@ If you're running your MongoDB server locally, then by default your local MongoD
 | ... | ... |
 
 **Then using the above "conversion" table, complete `Pipeline.py` by converting/condensing your normal query methods into one that uses pipeline aggregation!**
-<small>Admittedly, this is not the best example to show the true power of pipeline aggregation but it is a step in the right direction </small>
+<font size="1">Admittedly, this is not the best example to show the true power of pipeline aggregation but it is a step in the right direction </font>
 
 ##
 
