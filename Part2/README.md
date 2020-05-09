@@ -16,7 +16,7 @@ Being the ONE AND ONLY data master in BuildingBloCS land and have all informatio
 
 The fate of BuildingBloCS land lies in your hands. :exclamation::exclamation::exclamation:
 
-**Answers/Code would be uploaded after the workshop**
+**Code Snippets have been uploaded but full answers would only be uploaded after the workshop**
 
 ---
 
