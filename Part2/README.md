@@ -2,7 +2,7 @@
 
 For this workshop, we shall be going through reading the database using the `.aggregate()` method on a database collection and finding out who stole the sacred BuildingBloCS Logo.
 
-## [Read the storyline here](https://github.com/joelleoqiyi/BBCS-X-NoSQL/tree/master/Part1)
+## [Read the storyline here](https://github.com/joelleoqiyi/BBCS-X-NoSQL/blob/master/Part2/storyline.md)
 
 ---
 
