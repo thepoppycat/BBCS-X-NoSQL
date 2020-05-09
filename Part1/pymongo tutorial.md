@@ -15,6 +15,7 @@ import pymongo
 client = pymongo.MongoClient(<MongoDB server here>)
 ```
 If you're running your MongoDB server locally, then by default your local MongoDB IP address and port is `'127.0.0.1', 27017` respectfully. If you wanna connect to the MongoDB Atlas as explained in the workshop then please follow the instructions in the README.MD outside.
+
 For this ~~cheatsheet~~ example, our database will be consumables, collection be food, and documents be banana.
 ## Create
 
