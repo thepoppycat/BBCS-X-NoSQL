@@ -90,7 +90,7 @@ Here you will learn how to view data in your MongoDB server.
 ```
 print(client.list_database_names())
 ```
-**Listing all collections in a databse**
+**Listing all collections in a database**
 ```
 print(consumabes_database.list_collection_names())
 ```
